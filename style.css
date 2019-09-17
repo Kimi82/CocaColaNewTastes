@@ -1,38 +1,91 @@
 html, body{
-margin: 0 auto;
-overflow: hidden;
-height: 100%;
-}
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'Squada One', cursive;
+  }
 
-#top{
-  background-color: #E61C66; 
-  justify-content: center; 
-  width: 100%;
-  height: 30%;
-  display: flex;
-
-}
-
-#bottom{
- background-color: 	#4169E1;
- justify-content: center;
- width: 100%;
- height: 60%;
- display: flex;
-}
-#animation{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  #content{
+    top: 15%;
+    left: 55%;
+    width: 40%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    position: absolute;
     
-}
+    border: 5px solid #0000;
+    border-radius: 15%;
+  }
+  #image-content{
+    top: 15%;
+    left: 1%;
+    width: 1383px;
+    height: 75%;
+    z-index: 1;
+    position: relative;
+    transition: left 2s;
+    
+  }
+  
+  #top{
+    background-color: #E61C66; 
+    justify-content: center; 
+    width: 100%;
+    height: 30%;
+    display: flex;
+    z-index: 1;
+  }
+  
+  #bottom{
+   background-color: 	#4169E1;
+   justify-content: center;
+   width: 100%;
+   height: 60%;
+   display: flex;
+   z-index: 1;
+  }
+  #animation{
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+  }
+  
+  #wave{
+    display: flex;
+    align-items: center;
+    width: 400%;
+    height: 110%;
+    margin-top: -7px;
+    margin-left: 0;
 
-#wave{
-  display: flex;
-  align-items: center;
-  width: 400%;
-  height: 110%;
-  margin-top: -7px;
-  margin-left: -15px;
-}
+    animation-name: slide;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes slide{
+    from{
+      margin-left: 0;
+    }
+
+    to{
+      margin-left: -1700px;
+    }
+  }
+
+  #info{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    font-size: 55px;
+    z-index: 1
+  }
